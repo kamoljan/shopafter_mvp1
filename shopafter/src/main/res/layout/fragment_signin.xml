@@ -1,70 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/ll_login_container"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:layout_margin="15dp"
     android:orientation="vertical">
-  <Button
-      android:id="@+id/b_login"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:textStyle="bold"
-      android:layout_marginTop="100dp"
-      android:text="@string/login"
-      android:textColor="#fff"
-      android:layout_gravity="center_horizontal"
-      android:background="@drawable/button_login"
-      android:layout_centerHorizontal="true"/>
-  <TextView
-      android:id="@+id/tv_or"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/b_login"
-      android:layout_gravity="center"
-      android:gravity="center"
-      android:textColor="#fffe3138"
-      android:text="or"
-      android:layout_centerHorizontal="true"/>
-  <TextView
-      android:id="@+id/tv_via_email"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/tv_or"
-      android:layout_gravity="center"
-      android:gravity="center"
-      android:text="via E-Mail"
-      android:layout_centerHorizontal="true"/>
-  <EditText
-      android:id="@+id/et_name"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/tv_via_email"
-      android:hint="Name"
-      />
-  <EditText
-      android:id="@+id/et_email"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/et_name"
-      android:inputType="textEmailAddress"
-      android:hint="Email"
-      />
-  <EditText
-      android:id="@+id/et_password"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/et_email"
-      android:inputType="textPassword"
-      android:hint="Password"
-      />
-  <Button
-      android:id="@+id/b_signin"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="@color/shopafterPink"
-      android:text="Sign in"
-      android:textColor="@color/white"
-      android:layout_alignParentBottom="true"
-      />
-</RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:text="@string/facebook_login_recommendation" />
+
+    <Button
+        android:id="@+id/b_facebook_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/button_login"
+        android:text="@string/login_with_facebook"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:text="@string/facebook_login_promise" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:text="@string/or" />
+
+
+    <Button
+        android:id="@+id/b_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/shopafterPink"
+        android:text="@string/sign_up_with_email"
+        android:textColor="@color/white" />
+</LinearLayout>

@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="app_name">ShopAfter</string>
-  <string name="app_id">1454832154759543</string>
-  <string name="login">Log in with Facebook</string>
-  <string name="delete">Delete</string>
-  <string name="sold_out">Sold out</string>
-  <string name="title_section1">Section 1</string>
-  <string name="title_section2">Section 2</string>
-  <string name="title_section3">Section 3</string>
-  <string name="action_settings">Settings</string>
-  <string name="facebook_login_message">Log in and become part of the best online market place in Southeast Asia!!!\nDon\'t worry, we won\'t share anything without your okay. Promise!</string>
+    <string name="app_name">ShopAfter</string>
+    <string name="app_id">1454832154759543</string>
+    <string name="login_with_facebook">Log in with Facebook</string>
+    <string name="delete">Delete</string>
+    <string name="sold_out">Sold out</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="facebook_login_message">Log in and become part of the best online market place in Southeast Asia!!!\nDon\'t worry, we won\'t share anything without your okay. Promise!</string>
+    <string name="facebook_login_recommendation">We highly recommend using Facebook so you can sell your item faster!</string>
+    <string name="facebook_login_promise">We will never post anything without permission!</string>
+    <string name="or">OR</string>
+    <string name="signin">Sign in</string>
+    <string name="sign_up_with_email">Sign Up with Email</string>
+    <string name="title_activity_generic">GenericActivity</string>
+    <string name="user_name">Name</string>
+    <string name="user_email">Email</string>
+    <string name="user_password">Password</string>
 </resources>

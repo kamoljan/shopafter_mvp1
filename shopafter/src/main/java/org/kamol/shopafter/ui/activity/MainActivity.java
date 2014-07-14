@@ -114,8 +114,7 @@ public class MainActivity extends BaseActivity implements ActionBar.TabListener 
 
   /**
    * A {@link android.support.v4.app.FragmentPagerAdapter} that returns a fragment corresponding
-   * to one of the primary
-   * sections of the app.
+   * to one of the primary sections of the app.
    */
   public static class AppSectionsPagerAdapter extends FragmentPagerAdapter {
     public AppSectionsPagerAdapter(FragmentManager fm) {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.kamol.shopafter" >
+    package="org.kamol.shopafter">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -17,17 +17,18 @@
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
 
     <application
+        android:debuggable="true"
         android:name=".ShopAfterApp"
         android:allowBackup="true"
-        android:debuggable="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/CustomActionBarTheme" >
+        android:theme="@style/CustomActionBarTheme">
         <activity
             android:name=".ui.activity.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,7 +39,7 @@
         <activity
             android:name=".ui.activity.ViewActivity"
             android:label="@string/app_name"
-            android:theme="@android:style/Theme.NoTitleBar" >
+            android:theme="@android:style/Theme.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -59,7 +60,7 @@
         <!-- Parse Push Service -->
         <service android:name="com.parse.PushService" />
 
-        <receiver android:name="com.parse.ParseBroadcastReceiver" >
+        <receiver android:name="com.parse.ParseBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.USER_PRESENT" />
@@ -67,7 +68,7 @@
         </receiver>
         <receiver
             android:name="com.parse.GcmBroadcastReceiver"
-            android:permission="com.google.android.c2dm.permission.SEND" >
+            android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
@@ -76,10 +77,17 @@
             </intent-filter>
         </receiver>
 
+        <!--<activity-->
+            <!--android:name=".LoginActivity"-->
+            <!--android:label="@string/title_activity_login"-->
+            <!--android:windowSoftInputMode="adjustResize|stateVisible"></activity>-->
         <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login"
-            android:windowSoftInputMode="adjustResize|stateVisible" >
+            android:name=".ui.activity.GenericActivity"
+            android:label="@string/title_activity_generic"
+            android:parentActivityName=".ui.activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.kamol.shopafter.ui.activity.MainActivity" />
         </activity>
     </application>
 

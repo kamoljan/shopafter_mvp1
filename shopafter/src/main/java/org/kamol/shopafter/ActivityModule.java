@@ -2,12 +2,17 @@ package org.kamol.shopafter;
 
 import android.content.Context;
 
+import com.squareup.otto.Produce;
+
 import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
 
+import org.kamol.shopafter.bus.BusProvider;
 import org.kamol.shopafter.event.ActivityResultEvent;
+import org.kamol.shopafter.event.FragmentEvent;
+import org.kamol.shopafter.ui.activity.GenericActivity;
 import org.kamol.shopafter.ui.activity.MainActivity;
 import org.kamol.shopafter.ui.fragment.InsertAdContainerFragment;
 import org.kamol.shopafter.ui.fragment.InsertAdFragment;
@@ -15,6 +20,8 @@ import org.kamol.shopafter.ui.fragment.ListingFragment;
 import org.kamol.shopafter.ui.fragment.MainFragment;
 import org.kamol.shopafter.ui.fragment.MyAdsFragment;
 import org.kamol.shopafter.ui.fragment.ProfileContainerFragment;
+import org.kamol.shopafter.ui.fragment.SignInFragment;
+import org.kamol.shopafter.ui.fragment.SignupFragment;
 import org.kamol.shopafter.ui.gallery.MyAdsView;
 
 /**
@@ -31,8 +38,14 @@ import org.kamol.shopafter.ui.gallery.MyAdsView;
         InsertAdContainerFragment.class,
         ProfileContainerFragment.class,
         ActivityResultEvent.class,
+
         MyAdsView.class,
-        MyAdsFragment.class
+        MyAdsFragment.class,
+
+        GenericActivity.class,
+        SignupFragment.class,
+        SignInFragment.class,
+        FragmentEvent.class //XXX do we need it?
     },
     addsTo = AndroidModule.class,
     library = true
@@ -50,5 +63,9 @@ public class ActivityModule {
    */
   @Provides @Singleton @ForActivity Context provideActivityContext() {
     return activity;
+  }
+
+  @Produce public FragmentEvent produceFragment() {
+    return new FragmentEvent("SignupFragment");
   }
 }
